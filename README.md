@@ -3,7 +3,7 @@
 ## 📖 Introdução
 
 Este projeto realiza o envio automático de e-mails personalizados utilizando templates em HTML e informações armazenadas em um banco de dados **SQLite**.  
-Foi projetado para campanhas de pesquisa ou comunicação em massa com clientes, de forma segura e organizada, utilizando variáveis de ambiente para proteger informações sensíveis.
+Foi projetado para campanhas de pesquisa ou comunicação em massa com clientes, de forma segura e organizada, em geração de emails automatizados em massa.
 
 ---
 
@@ -12,13 +12,19 @@ Foi projetado para campanhas de pesquisa ou comunicação em massa com clientes,
 A estrutura do projeto está organizada da seguinte forma:
 
 ```brash
-emails/ ├── web/ │ └── site/ │ ├── email1.html # Template de e-mail HTML (opcional) │ ├── email2.html # Template principal utilizado no envio │ └── envio.py # Script principal de envio dos e-mails ├── .env.example # Exemplo de variáveis de ambiente ├── .gitignore # Ignora arquivos sensíveis └── README.md #Documentação do projeto
+emails/ 
+├── web/ 
+│ └── site/ 
+│ ├── email1.html # Template de e-mail HTML (opcional) 
+│ ├── email2.html # Template principal utilizado no envio 
+├── envio.py # Script principal de envio dos e-mails 
+├── .env.example # Exemplo de variáveis de ambiente 
+├── .gitignore # Ignora arquivos sensíveis 
+└── README.md #Documentação do projeto
+
+---
+
 ```
-
-markdown
-Copiar
-Editar
-
 - **`envio.py`**: Script responsável por:
   - Carregar variáveis do `.env`;
   - Conectar ao banco de dados e consultar empresas e e-mails;
