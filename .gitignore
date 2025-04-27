@@ -1,0 +1,6 @@
+# Ignorar arquivos e pastas específicas
+.env
+data/
+logs/
+image/
+code/
