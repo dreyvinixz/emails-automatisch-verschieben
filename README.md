@@ -44,12 +44,6 @@ As principais dependências para execução são:
 pip install python-dotenv
 ```
 
-Ou, se preferir adicionar mais segurança:
-
-```bash
-pip install python-dotenv
-```
-
 ## 📚 Bibliotecas utilizadas no projeto:
 
 smtplib (nativo)
@@ -127,6 +121,6 @@ Implementar suporte a múltiplos templates de forma dinâmica.
 
 ## 📚 Licença
 Este projeto é livre para uso acadêmico e profissional mediante créditos à autoria.
-Contato para colaborações: [codetoday]
+Contato para colaborações: [dreyvinixz]
 
 ---
