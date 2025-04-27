@@ -22,8 +22,6 @@ emails/
 ├── .gitignore # Ignora arquivos sensíveis 
 └── README.md #Documentação do projeto
 
----
-
 ```
 - **`envio.py`**: Script responsável por:
   - Carregar variáveis do `.env`;
@@ -32,7 +30,7 @@ emails/
   - Enviar e-mails utilizando protocolo **SMTP seguro (TLS)**;
   - Controle de tempo entre envios para evitar bloqueios.
 
-- **`email2.html`**: Template HTML do e-mail, onde `[empresa_name]` é substituído dinamicamente pelo nome da empresa.
+- **`email[1 ou 2].html`**: Template HTML do e-mail, onde `[empresa_name]` é substituído dinamicamente pelo nome da empresa, podendo ser escolhido entre as duas opções.
 
 - **`.env.example`**: Exemplo de configuração para as variáveis de ambiente.
 
@@ -44,13 +42,15 @@ As principais dependências para execução são:
 
 ```bash
 pip install python-dotenv
+```
+
 Ou, se preferir adicionar mais segurança:
 
-bash
-Copiar
-Editar
+```bash
 pip install python-dotenv
-Bibliotecas utilizadas no projeto:
+```
+
+## 📚 Bibliotecas utilizadas no projeto:
 
 smtplib (nativo)
 
@@ -64,45 +64,46 @@ os (nativo)
 
 dotenv
 
-⚙️ Variáveis de Ambiente (.env)
+## ⚙️ Variáveis de Ambiente (.env)
 Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
 
-env
-Copiar
-Editar
+*.env*
+
+```
 EMAIL_SENDER=seuemail@dominio.com
 EMAIL_PASSWORD=sua_senha
 SMTP_SERVER=smtp.dominio.com
 SMTP_PORT=587
 DB_PATH=caminho/para/seu/banco_de_dados.db
-Importante:
+```
+# ⚠️Importante:
 
 Utilize servidores SMTP confiáveis.
 
 Nunca versionar o .env para garantir segurança.
 
-🚀 Como Executar
+## 🚀 Como Executar
 Clone o repositório:
 
-bash
-Copiar
-Editar
-git clone <URL-do-repositório>
+```bash
+git clone https://github.com/dreyvinixz/emails-automatisch-verschieben.git
+```
+
 Instale as dependências necessárias:
 
-bash
-Copiar
-Editar
+``` bash
 pip install python-dotenv
+```
+
 Configure seu arquivo .env corretamente.
 
 Execute o script de envio:
 
-bash
-Copiar
-Editar
+```bash
 python web/site/envio.py
-📊 Fluxo de Funcionamento
+```
+
+## 📊 Fluxo de Funcionamento
 Conecta ao banco de dados e consulta os e-mails e nomes das empresas;
 
 Para cada entrada:
@@ -115,7 +116,7 @@ Envia o e-mail via SMTP;
 
 Aguarda 5 segundos antes do próximo envio.
 
-📈 Futuras Melhorias
+## 📈 Futuras Melhorias
 Implementar envio assíncrono para acelerar processos;
 
 Adicionar logs detalhados para controle de status de envio;
@@ -124,15 +125,8 @@ Criar sistema de retry automático em caso de falha de envio;
 
 Implementar suporte a múltiplos templates de forma dinâmica.
 
-📚 Licença
+## 📚 Licença
 Este projeto é livre para uso acadêmico e profissional mediante créditos à autoria.
-Contato para colaborações: [seu-email@dominio.com]
-
-yaml
-Copiar
-Editar
+Contato para colaborações: [codetoday]
 
 ---
-
-Se desejar, também posso montar para você um exemplo do `.gitignore` adaptado para proteger o `.env` e o banco de dados.  
-Gostaria que eu gerasse? 📄
